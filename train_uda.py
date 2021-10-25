@@ -249,7 +249,7 @@ def train(args, labeled_trainloader, unlabeled_trainloader, val_loader, test_loa
             loss_mask = probs_u_w.max(-1)[0].ge(p_cutoff)
 
             if loss_mask.sum() == 0:
-                Lu = torch.zeros(1, dtype=torch.float).cuda()
+                Lu = torch.zeros(1, dtype=torch.float).to(args.device)
             else:
                 Lu = F.kl_div(
                     torch.log_softmax(logits_u_s[loss_mask], -1), 
