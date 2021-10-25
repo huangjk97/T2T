@@ -4,6 +4,10 @@ Code for the paper: "[Trash to Treasure: Harvesting OOD Data with Cross-Modal Ma
 ![T2T Pipeline](assets/pipeline.png)
 
 ## Usage
+
+### Dataset Preparation
+Download CIFAR-10 dataset and place `cifar-10-batches-py` under the directory `data`.
+
 ### Train
 Train the model by 1000 labeled data of CIFAR-10 dataset and use TinyImageNet as OOD data source:
 ```bash
